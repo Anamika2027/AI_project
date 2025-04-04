@@ -1,0 +1,449 @@
+
+/* Custom styles beyond Tailwind */
+.progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(13,148,136,0.2) 0%, rgba(45,212,191,0.4) 100%);
+    overflow: hidden;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .transaction-item {
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #f0f9ff 0%, #cbebff 100%);
+    border-left: 4px solid #0d9488;
+  }
+  
+  .transaction-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 6px rgba(13, 148, 136, 0.1);
+  }
+  
+  .category-item {
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #e6f2ff 0%, #b3e0ff 100%);
+    border-left: 4px solid #2dd4bf;
+  }
+  
+  .category-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(45, 212, 191, 0.15);
+  }
+  
+  /* Custom scrollbar with gradient */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: linear-gradient(to right, #f0f9ff, #cbebff);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #0d9488, #2dd4bf);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #2dd4bf, #0d9488);
+  }
+  
+  /* Tooltip with gradient */
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background: linear-gradient(135deg, #0d9488, #2dd4bf);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 6px rgba(13, 148, 136, 0.2);
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Animations with more vibrant colors */
+  @keyframes fadeIn {
+    from { 
+      opacity: 0; 
+      transform: translateY(10px);
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes slideIn {
+    from { 
+      transform: translateX(-20px); 
+      opacity: 0; 
+    }
+    to { 
+      transform: translateX(0); 
+      opacity: 1; 
+    }
+  }
+  
+  .slide-in {
+    animation: slideIn 0.4s ease-out;
+  }
+  
+  /* Gradient background for sections */
+  .gradient-bg {
+    background: linear-gradient(135deg, #f0f9ff 0%, #cbebff 100%);
+  }
+  
+  /* Colorful buttons */
+  .colorful-button {
+    background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .colorful-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(13, 148, 136, 0.2);
+  }
+  
+  /* Category icons and colors */
+  .category-icon {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header background */
+  .app-header {
+    background: linear-gradient(90deg, #0f766e 0%, #0d9488 50%, #14b8a6 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dashboard cards with hover effect */
+  .dashboard-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    border-top: 4px solid transparent;
+  }
+  
+  .dashboard-card:nth-child(1) {
+    border-top-color: #0ea5e9;
+  }
+  
+  .dashboard-card:nth-child(2) {
+    border-top-color: #f97316;
+  }
+  
+  .dashboard-card:nth-child(3) {
+    border-top-color: #10b981;
+  }
+  
+  .dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Empty state styling */
+  .empty-state {
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    border: 1px dashed #d1d5db;
+  }
+  
+  .empty-state img {
+    max-width: 150px;
+    margin: 0 auto 20px;
+    opacity: 0.7;
+  }
+  
+  /* Interactive tips section */
+  .tips-card {
+    background: linear-gradient(135deg, #fff8e6 0%, #ffedd5 100%);
+    border-left: 4px solid #f97316;
+  }
+  
+  .tips-card:hover {
+    box-shadow: 0 6px 12px rgba(249, 115, 22, 0.1);
+  }
+  
+  /* Confetti animation for achievements */
+  @keyframes confetti {
+    0% { transform: translateY(0) rotate(0); opacity: 1; }
+    100% { transform: translateY(100px) rotate(360deg); opacity: 0; }
+  }
+  
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    animation: confetti 1s ease-in-out forwards;
+  }
+  
+  /* Pulse animation for notifications */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .pulse-animation {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(90deg, #0d9488 0%, #2dd4bf 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+  }
+  
+  /* New vivid color scheme elements */
+  .category-item:nth-child(odd) {
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    border-left: 4px solid #0ea5e9;
+  }
+  
+  .category-item:nth-child(even) {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-left: 4px solid #f59e0b;
+  }
+  
+  .transaction-item:nth-child(odd) {
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  }
+  
+  .transaction-item:nth-child(even) {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  }
+  
+  /* Animated icons */
+  .animated-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .animated-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+  }
+  
+  /* Rainbow progress bar for special achievements */
+  .rainbow-progress {
+    background: linear-gradient(
+      90deg, 
+      #ff0000 0%, 
+      #ff9a00 20%, 
+      #d0de21 40%, 
+      #4fdc4a 60%, 
+      #3fdad8 80%, 
+      #2fc9e2 100%
+    );
+    animation: rainbow 2s linear infinite;
+    background-size: 200% 100%;
+  }
+  
+  @keyframes rainbow {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+  }
+  
+  /* Card hover effects */
+  .hover-float {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-float:hover {
+    transform: translateY(-8px);
+  }
+  
+  /* Custom button styles */
+  .button-primary {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .button-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(14, 165, 233, 0.4);
+  }
+  
+  .button-secondary {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .button-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(245, 158, 11, 0.4);
+  }
+  
+  /* Image styling */
+  .feature-image {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .feature-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Custom Background Patterns */
+  .pattern-dots {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .pattern-stripes {
+    background: repeating-linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.03),
+      rgba(0, 0, 0, 0.03) 10px,
+      rgba(0, 0, 0, 0.06) 10px,
+      rgba(0, 0, 0, 0.06) 20px
+    );
+  }
+  
+  /* 3D card effect */
+  .card-3d {
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  
+  .card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg);
+    box-shadow: 
+      -5px 5px 20px rgba(0, 0, 0, 0.08),
+      5px -5px 20px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Floaty elements */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .float-animation {
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  /* Shimmer effect for loading states */
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  .loading-shimmer {
+    background: linear-gradient(90deg,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,0.4) 50%,
+      rgba(255,255,255,0) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  /* Cursor interaction */
+  .cursor-interactive {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cursor-interactive:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cursor-interactive:hover:after {
+    opacity: 1;
+  }
+  
+{
+      const apiKey = ""; // Your Gemini API key
+    
+      fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": apiKey
+        },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [
+                {
+                  text: "Tell me a joke!" // Your prompt goes here
+                }
+              ]
+            }
+          ]
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Gemini Response:", data);
+    
+        // Optional: show it in the HTML
+        const output = data.candidates?.[0]?.content?.parts?.[0]?.text || "No response";
+        document.body.innerHTML += `<p><strong>Gemini says:</strong> ${output}</p>`;
+      })
+      .catch(error => {
+        console.error("Error fetching from Gemini API:", error);
+      });
+    }
